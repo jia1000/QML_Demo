@@ -13,6 +13,18 @@ Page {
 
     Label {
         text: qsTr("You are on Series 2.")
+        anchors.verticalCenterOffset: -159
+        anchors.horizontalCenterOffset: 0
         anchors.centerIn: parent
+    }
+
+    Image {
+        id: image
+        x: 138
+        y: 62
+        width: 400
+        height: 300
+        source: "qrc:/bmp/2.bmp"
+        fillMode: Image.PreserveAspectFit
     }
 }

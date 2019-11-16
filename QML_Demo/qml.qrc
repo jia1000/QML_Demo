@@ -6,5 +6,8 @@
         <file>main.qml</file>
         <file>qtquickcontrols2.conf</file>
         <file>Page3Form.ui.qml</file>
+        <file>bmp/1.bmp</file>
+        <file>bmp/2.bmp</file>
+        <file>bmp/3.bmp</file>
     </qresource>
 </RCC>

@@ -14,6 +14,8 @@ Page {
     Label {
         id:labeltext
         text: qsTr("You are on Series 1.")
+        anchors.verticalCenterOffset: -125
+        anchors.horizontalCenterOffset: 0
         anchors.centerIn: parent
     }
 
@@ -25,5 +27,15 @@ Page {
         anchors.left: button.left
         anchors.leftMargin: 10
         onClicked: labeltext.text = qsTr("点击了")
+    }
+
+    Image {
+        id: image
+        x: 137
+        y: 94
+        width: 400
+        height: 300
+        source: "qrc:/bmp/1.bmp"
+        fillMode: Image.PreserveAspectFit
     }
 }
