@@ -12,7 +12,18 @@ Page {
     }
 
     Label {
+        id:labeltext
         text: qsTr("You are on Series 1.")
         anchors.centerIn: parent
+    }
+
+    Button {
+        id: button
+        text:qsTr("点击修改文本")
+        x: 30
+        y: 10
+        anchors.left: button.left
+        anchors.leftMargin: 10
+        onClicked: labeltext.text = qsTr("点击了")
     }
 }
