@@ -24,9 +24,17 @@ Page {
         text:qsTr("点击修改文本")
         x: 30
         y: 10
+        width: 120
+        height: 30
         anchors.left: button.left
         anchors.leftMargin: 10
         onClicked: labeltext.text = qsTr("点击了")
+        MouseArea{
+            anchors.fill: parent
+            hoverEnabled: true
+            onEntered:  button.text="Enter"
+            onExited:  button.text="Exit"
+        }
     }
 
     Image {
