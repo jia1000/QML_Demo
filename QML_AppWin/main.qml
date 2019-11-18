@@ -10,10 +10,11 @@ ApplicationWindow {
     title: qsTr("Hello World")
 
 
+    // 学习Rectangle的渐变色
     Rectangle {
-        width: 640
-        height: 480
-        rotation: 90
+        width: 100
+        height: 80
+       // rotation: 90
         gradient: Gradient{
             GradientStop {
                 position: 0.0
@@ -29,4 +30,33 @@ ApplicationWindow {
             }
         }
     }
+
+    // 学习Rectangle的z轴属性
+    Rectangle {
+        width: 300
+        height: 200
+
+        x:100
+        y:0
+
+        Rectangle {
+            x:20
+            y:20
+            width: 150
+            height: 100
+            color: "#000080"
+            z:0.5
+        }
+        Rectangle {
+            x:100
+            y:70
+            width: 100
+            height: 100
+            color: "#00c000"
+            z:1
+            //opacity: 0.6
+        }
+    }
+
+
 }
