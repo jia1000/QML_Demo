@@ -130,6 +130,7 @@ ApplicationWindow {
                 if(imageViewer.status === Image.Loading) {
                     busy.running = true;
                     statelabel.visible = false;
+                    console.log("Image... ");
                 }
                 else if(imageViewer.status === Image.Ready) {
                     busy.running = false;
@@ -146,5 +147,49 @@ ApplicationWindow {
             //imageViewer.source = "https://www.baidu.com/img/bd_logo1.png";
         }
 
+    }
+    // 学习附加信号处理器---Connections
+    Rectangle {
+        width:300
+        height: 240
+
+        x:300
+        y:200
+
+        color: "grey"
+
+
+        Text {
+            id: text1
+            text: qsTr("text1")
+            anchors.horizontalCenter: parent.horizontalCenter
+            anchors.top: parent.top
+            anchors.topMargin: 20
+            color: "blue"
+            font.pixelSize: 28
+        }
+        Text {
+            id: text2
+            text: qsTr("text2")
+            anchors.horizontalCenter: parent.horizontalCenter
+            anchors.top: text1.bottom
+            anchors.topMargin: 8
+            color: "blue"
+            font.pixelSize: 28
+        }
+        Button {
+            id:changeButton
+            anchors.top: text2.bottom
+            anchors.topMargin: 8
+            anchors.horizontalCenter: parent.horizontalCenter
+            text:"change"
+        }
+        Connections {
+            target: changeButton
+            onClicked:{
+                text1.color = Qt.rgba(Math.random(), Math.random(), Math.random(), 1);
+                text2.color = Qt.rgba(Math.random(), Math.random(), Math.random(), 1);
+            }
+        }
     }
 }
