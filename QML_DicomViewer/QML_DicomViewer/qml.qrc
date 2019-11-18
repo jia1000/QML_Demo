@@ -2,5 +2,8 @@
     <qresource prefix="/">
         <file>main.qml</file>
         <file>TabWidget.qml</file>
+        <file>ButtonPage.qml</file>
+        <file>InputPage.qml</file>
+        <file>ProgressPage.qml</file>
     </qresource>
 </RCC>
