@@ -96,4 +96,55 @@ ApplicationWindow {
             anchors.centerIn: parent
         }
     }
+    // 学习Image 加载在线图片
+    Rectangle {
+        width:300
+        height: 240
+
+        x:0
+        y:200
+
+        color: "red"
+
+        BusyIndicator {
+            id:busy
+            running: true
+            anchors.centerIn: parent
+            z:2
+        }
+
+        Text {
+            id: statelabel
+            text: qsTr("text")
+            visible: false
+            anchors.centerIn: parent
+            z:3
+        }
+        Image {
+            id:imageViewer
+            asynchronous: true
+            cache:false
+            anchors.fill:parent
+            fillMode: Image.PreserveAspectFit
+            onStateChanged: {
+                if(imageViewer.status === Image.Loading) {
+                    busy.running = true;
+                    statelabel.visible = false;
+                }
+                else if(imageViewer.status === Image.Ready) {
+                    busy.running = false;
+                }
+                else if(imageViewer.status === Image.Error) {
+                    busy.running = false;
+                    statelabel.visible = true;
+                    statelabel.text = "Error";
+                }
+            }
+        }
+        Component.onCompleted: {
+            imageViewer.source = "http://172.16.20.187/static/img/logo_viewer.png";
+            //imageViewer.source = "https://www.baidu.com/img/bd_logo1.png";
+        }
+
+    }
 }
