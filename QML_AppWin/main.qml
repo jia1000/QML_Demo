@@ -58,5 +58,42 @@ ApplicationWindow {
         }
     }
 
+    // 学习按键响应
+    Rectangle {
+        width: 100
+        height: 80
 
+        x:400
+        y:0
+
+        color: "yellow"
+        focus: true
+        Keys.enabled: true
+        Keys.onEscapePressed:  Qt.quit()
+        Keys.onBackPressed: Qt.quit()
+        Keys.onPressed: {
+            switch(event.key) {
+            case Qt.Key_0:
+            case Qt.Key_1:
+            case Qt.Key_2:
+            case Qt.Key_3:
+            case Qt.Key_4:
+            case Qt.Key_5:
+            case Qt.Key_6:
+            case Qt.Key_7:
+            case Qt.Key_8:
+            case Qt.Key_9:
+                event.accepted=true;
+                keyView.text = event.key - Qt.Key_0;
+                break;
+            }
+        }
+        Text {
+            id: keyView
+            text: qsTr("text")
+            font.bold: true
+            font.pixelSize: 24
+            anchors.centerIn: parent
+        }
+    }
 }
