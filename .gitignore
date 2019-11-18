@@ -4,3 +4,5 @@ build-QML_DragDrop_Demo-Desktop_Qt_5_13_0_MinGW_64_bit-Debug/
 build-QML_PopMenu-Desktop_Qt_5_13_0_MinGW_64_bit-Debug/
 build-QML_AppWin-Desktop_Qt_5_13_0_MinGW_64_bit-Debug/
 QML_TabView/build-QML_TabView-Desktop_Qt_5_13_0_MinGW_64_bit-Debug/
+QML_DicomViewer/build-QML_DicomViewer-Desktop_Qt_5_13_0_MinGW_64_bit-Debug/
+QML_ListView/build-QML_ListView-Desktop_Qt_5_13_0_MinGW_64_bit-Debug/
