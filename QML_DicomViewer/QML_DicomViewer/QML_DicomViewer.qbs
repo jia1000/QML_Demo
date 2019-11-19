@@ -25,6 +25,9 @@ CppApplication {
         "main.cpp",
         "main.qml",
         "qml.qrc",
+        "ButtonPage.qml",
+        "InputPage.qml",
+        "ProgressPage.qml"
     ]
 
     Group {     // Properties for the produced executable
